@@ -22,20 +22,19 @@ namespace :db do
 end
 
 file 'db/raw-emoji.json' do |t|
-  # system 'curl', '-fsSL', 'https://unpkg.com/emoji.json@11.0.1/emoji.json', '-o', t.name
   system 'curl', '-fsSL', 'https://raw.githack.com/koddsson/emoji.json/master/emoji.json', '-o', t.name
 end
 
 file 'db/ucd.nounihan.grouped.xml' do
   Dir.chdir('db') do
-    system 'curl', '-fsSLO', 'http://www.unicode.org/Public/9.0.0/ucdxml/ucd.nounihan.grouped.zip'
+    system 'curl', '-fsSLO', 'http://www.unicode.org/Public/12.0.0/ucdxml/ucd.nounihan.grouped.zip'
     system 'unzip', '-q', 'ucd.nounihan.grouped.zip'
     rm 'ucd.nounihan.grouped.zip'
   end
 end
 
 file 'db/emoji-test.txt' do |t|
-  system 'curl', '-fsSL', 'http://unicode.org/Public/emoji/4.0/emoji-test.txt', '-o', t.name
+  system 'curl', '-fsSL', 'http://unicode.org/Public/emoji/12.0/emoji-test.txt', '-o', t.name
 end
 
 directory 'images/unicode' do
