@@ -3650,8 +3650,7 @@
   , "description": "detective"
   , "category": "People & Body"
   , "aliases": [
-      "male_detective"
-    , "detective"
+      "detective"
     ]
   , "tags": [
       "sleuth"
@@ -3665,10 +3664,10 @@
   , "category": "People & Body"
   , "aliases": [
       "male_detective"
-    , "detective"
     ]
   , "tags": [
       "sleuth"
+    , "detective"
     ]
   , "unicode_version": "7.0"
   , "ios_version": "9.1"
@@ -3682,6 +3681,7 @@
     ]
   , "tags": [
       "sleuth"
+    , "detective"
     ]
   , "unicode_version": "6.0"
   , "ios_version": "10.0"
@@ -4768,7 +4768,7 @@
   , "description": "person golfing"
   , "category": "People & Body"
   , "aliases": [
-      "golfing_man"
+      "golfing"
     ]
   , "tags": [
     ]
@@ -4915,7 +4915,6 @@
   , "description": "person bouncing ball"
   , "category": "People & Body"
   , "aliases": [
-      "basketball_man"
     ]
   , "tags": [
     ]
@@ -4951,7 +4950,7 @@
   , "description": "person lifting weights"
   , "category": "People & Body"
   , "aliases": [
-      "weight_lifting_man"
+      "weight_lifting"
     ]
   , "tags": [
       "gym"
@@ -5409,8 +5408,7 @@
   , "description": "couple with heart"
   , "category": "People & Body"
   , "aliases": [
-      "couple_with_heart_woman_man"
-    , "couple_with_heart"
+      "couple_with_heart"
     ]
   , "tags": [
     ]
@@ -5458,8 +5456,7 @@
   , "description": "family"
   , "category": "People & Body"
   , "aliases": [
-      "family_man_woman_boy"
-    , "family"
+      "family"
     ]
   , "tags": [
       "home"
@@ -7081,9 +7078,7 @@
     "emoji": "🦗"
   , "description": "cricket"
   , "category": "Animals & Nature"
-  , "aliases": [
-      "cricket"
-    ]
+  , "aliases": []
   , "tags": [
     ]
   , "unicode_version": "10.0"
@@ -14279,9 +14274,9 @@
   , "description": "pencil"
   , "category": "Objects"
   , "aliases": [
-      "pencil"
     ]
   , "tags": [
+      "pencil"
     ]
   , "unicode_version": ""
   , "ios_version": "10.2"
