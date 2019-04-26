@@ -20,11 +20,11 @@ module Emoji
     @all
   end
 
-  def apple_palette
-    return @apple_palette if defined? @apple_palette
+  def palette
+    return @palette if defined? @palette
 
     data = File.open(data_file, 'r:UTF-8') { |f| JSON.parse(f.read) }
-    @apple_palette = data.each_with_object({}) do |group, all|
+    @palette = data.each_with_object({}) do |group, all|
       next unless group.key?('category')
 
       category = group.fetch('category')

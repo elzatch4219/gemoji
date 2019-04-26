@@ -72,7 +72,7 @@ class EmojiTest < TestCase
   end
 
   test "missing or incorrect unicodes" do
-    source_unicode_emoji = Emoji.apple_palette.values.flatten
+    source_unicode_emoji = Emoji.palette.values.flatten
     missing = source_unicode_emoji - Emoji.all.flat_map(&:unicode_aliases)
 
     message = "Missing or incorrect unicodes:\n"
