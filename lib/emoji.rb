@@ -6,7 +6,7 @@ module Emoji
   extend self
 
   def raw_data_file
-    File.expand_path('../db/raw-emoji.json', __dir__)
+    File.expand_path('../../db/raw-emoji.json', __FILE__)
   end
 
   def data_file
