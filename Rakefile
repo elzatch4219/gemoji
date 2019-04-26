@@ -12,12 +12,18 @@ namespace :db do
   task generate: [
     'db/ucd.nounihan.grouped.xml',
     'db/emoji-test.txt',
+    'db/raw-emoji.json'
   ]
 
   desc %(Dump a list of supported Emoji with Unicode descriptions and aliases)
   task :dump => :generate do
     system 'ruby', '-Ilib', 'db/dump.rb'
   end
+end
+
+file 'db/raw-emoji.json' do |t|
+  # system 'curl', '-fsSL', 'https://unpkg.com/emoji.json@11.0.1/emoji.json', '-o', t.name
+  system 'curl', '-fsSL', 'https://raw.githack.com/koddsson/emoji.json/master/emoji.json', '-o', t.name
 end
 
 file 'db/ucd.nounihan.grouped.xml' do

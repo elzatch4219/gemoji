@@ -5,6 +5,10 @@ require 'json'
 module Emoji
   extend self
 
+  def raw_data_file
+    File.expand_path('../db/raw-emoji.json', __dir__)
+  end
+
   def data_file
     File.expand_path('../../db/emoji.json', __FILE__)
   end
@@ -23,13 +27,13 @@ module Emoji
   def palette
     return @palette if defined? @palette
 
-    data = File.open(data_file, 'r:UTF-8') { |f| JSON.parse(f.read) }
+    data = File.open(raw_data_file, 'r:UTF-8') { |f| JSON.parse(f.read) }
     @palette = data.each_with_object({}) do |group, all|
       next unless group.key?('category')
 
       category = group.fetch('category')
       all[category] = [] unless all.key?(category)
-      all[category].push(group.fetch('emoji'))
+      all[category].push(group.fetch('char'))
     end
   end
 
